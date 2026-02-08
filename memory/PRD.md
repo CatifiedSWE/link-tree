@@ -10,7 +10,11 @@ Fix Vite `allowedHosts` error: "Blocked request. This host is not allowed."
 - Set up platform structure (frontend/backend directories)
 
 ## Status
-- **Fixed** - Site loads successfully (HTTP 200) on the preview domain
+- **Fixed** - Vite 6 `allowedHosts: 'all'` bug identified and resolved with explicit subdomain pattern
+
+## Root Cause
+- Vite 6 has a known bug where `allowedHosts: 'all'` or `true` doesn't work
+- Fix: Use explicit array `['.preview.emergentagent.com', 'localhost']`
 
 ## Backlog
 - No additional items
