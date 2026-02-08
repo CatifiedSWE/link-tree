@@ -41,18 +41,14 @@ export const GlassCard: React.FC = () => {
 
         {/* FRONT CONTENT - Opacity drops to 0 when share is open */}
         <div className={`relative z-10 flex flex-col p-8 md:p-10 pt-24 transition-all duration-500 ease-in-out ${isShareOpen ? 'opacity-0 scale-95 pointer-events-none translate-y-4' : 'opacity-100 scale-100 translate-y-0'}`}>
-          {/* Stylized Logo M - Replicating the attached image exactly */}
+          {/* Logo */}
           <div className="flex flex-col items-center text-center mb-10">
             <div className="w-24 h-24 mb-6 relative animate-float flex items-center justify-center">
-               <svg viewBox="0 0 100 100" className="w-full h-full text-white fill-none stroke-current">
-                 <path 
-                   d="M22,78 L42,28 C43,25 47,25 48,28 L52,42 C53,45 57,45 58,42 L62,28 C63,25 67,25 68,28 L88,78" 
-                   strokeWidth="15" 
-                   strokeLinecap="round" 
-                   strokeLinejoin="round"
-                   className="drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]"
-                 />
-               </svg>
+               <img 
+                 src="/assets/logo.webp" 
+                 alt="MergeX Logo" 
+                 className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]"
+               />
             </div>
             <h1 className="text-4xl font-bold tracking-tight mb-4 bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
               MergeX
